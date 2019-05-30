@@ -11,7 +11,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build && rm -rf dist && mv build dist",
+    "build": "PUBLIC_URL='./' react-scripts build && rm -rf dist && mv build dist",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
