@@ -1,0 +1,78 @@
+@import "node_modules/bootstrap/scss/bootstrap";
+
+.App-header nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  font-size: calc(10px + 2vmin);
+  background: #343a40;
+  color: white;
+  padding: 10px 25px 10px 10px;
+  h1 {
+      font-size: 28px;
+      margin-right: 16px;
+  }
+}
+
+.nav-options {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  background: #343a40;
+  z-index: 2;
+  a {
+    color: grey;
+    padding: 8px 8px;
+  }
+  a.selected {
+    color: white;
+  }
+  .search {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    // margin: 0px 5px;
+    input, button {
+      margin: 3px;
+      height: 38px;
+    }
+  }
+}
+
+.nav-options.show {
+  display: inherit;
+}
+
+.navbar.navbar-dark.bg-dark {
+  display: none;
+  padding: 0;
+}
+
+@include media-breakpoint-down(sm) {
+  .navbar.navbar-dark.bg-dark {
+    display: inherit;
+  }
+  .nav-options {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 56px;
+    flex-direction: column;
+    align-items: flex-end;
+    width: 100%;
+    a {
+      display: block;
+      text-align: right;
+      padding-right: 0;
+    }
+    padding: 10px 25px;
+  }
+  .nav-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+  }
+}

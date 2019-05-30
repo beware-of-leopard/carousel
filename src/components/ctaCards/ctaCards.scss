@@ -1,0 +1,17 @@
+.call-to-action {
+  margin: 40px 0;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  div {
+    width: 300px;
+    margin: 10px 30px;
+  }
+  .cta-photo-placeholder {
+    height: 100px;
+    width: 100px;
+    border-radius: 100%;
+    background: grey;
+    margin: 10px auto;
+  }
+}

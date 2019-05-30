@@ -1,0 +1,38 @@
+.featured {
+  > div {
+    border-top: 1px;
+    border-bottom: 0;
+    border-left: 0;
+    border-right: 0;
+    border-color: lightgrey;
+    border-style: solid;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 80px 0px;
+    .featured-text {
+      padding-right: 30px;
+      text-align: left;
+      min-width: 400px;
+      max-width: 600px;
+      span {
+          color: grey;
+      }
+    }
+  }
+  > div:nth-child(2) {
+    flex-direction: row-reverse;
+    .featured-text {
+      padding-left: 30px;
+    }
+  }
+  .image-placeholder {
+    min-width: 500px;
+    max-width: 500px;
+    min-height: 500px;
+    max-height: 500px;
+    background: lightgrey;
+  }
+}

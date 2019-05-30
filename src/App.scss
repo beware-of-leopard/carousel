@@ -1,0 +1,54 @@
+@import "./components/carousel/carousel.scss";
+@import "./components/ctaCards/ctaCards.scss";
+@import "./components/featuredContent/featuredContent.scss";
+@import "./components/navigation/navigation.scss";
+@import "node_modules/bootstrap/scss/bootstrap";
+
+.App {
+  text-align: center;
+  min-width: 520px;
+  main, footer {
+    padding: 0 100px;
+  }
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+footer {
+  .footer-container {
+    >div {
+      margin: 10px;
+    }
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-top: 1px solid lightgrey;
+    padding-top: 100px;
+    width: 100%;
+    .terms {
+      div, a {
+        display: inline;
+        margin: 0 3px;
+      }
+    }
+  }
+}
+
+@include media-breakpoint-down(sm) {
+  .App {
+    main, footer {
+      padding: 0 10px;
+    }
+  }
+  .featured {
+      > div, > div:nth-child(2) {
+        flex-direction: column;
+        align-items: center;
+        .featured-text {
+          padding: 0;
+        }
+      }
+  }
+}
